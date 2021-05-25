@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace VendingMachine.Coin
+namespace VendingMachine.Coins
 {
     class Pennies : Coin
     {

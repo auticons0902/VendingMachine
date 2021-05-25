@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace VendingMachine.Product
+namespace VendingMachine.Products
 {
     class Cokes : Product
     {
@@ -10,7 +10,7 @@ namespace VendingMachine.Product
         {
             Quantity = quantity;
             Price = 25;
-            Name = "Cokes";
+            Name = "Coke";
         }
     }
 }

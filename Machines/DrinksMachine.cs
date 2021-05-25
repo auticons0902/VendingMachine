@@ -2,33 +2,34 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
-using VendingMachine.Product;
-using VendingMachine.Coin;
+using VendingMachine.Products;
+using VendingMachine.Coins;
+//using VendingMachine.Machines;
 
-namespace VendingMachine.Machine
+namespace VendingMachine.Machines
 {
-    class DrinksMachine : VendingMachine
+    class DrinksMachine : Machine
     {
         public DrinksMachine() 
         {
-            Coins = new List<Coin> {
+            coins = new List<Coin> {
                 new Pennies(100),
                 new Nickels(10),
                 new Dimes(5),
                 new Quarters(25)
             };
-            Coins = Coins.OrderByDescending(c => c.Value).ToList();
+            coins = coins.OrderByDescending(c => c.Value).ToList();
 
-            Products = new List<Product> {
+            products = new List<Product> {
                 new Cokes(5),
                 new Pepsis(15),
                 new Sodas(3)
             };
         }
 
-        public Dictionary<string, int> GetProductInfo(string name)
+        public override Dictionary<string, int> GetProductInfo(string name)
         {
-            foreach (Product p in Products) {
+            foreach (Product p in products) {
                 if (p.Name == name) {
                     return new Dictionary<string, int>() { 
                         ["price"] = p.Price,
@@ -39,7 +40,9 @@ namespace VendingMachine.Machine
             throw new KeyNotFoundException("No products exist with given name");
         }
 
-        public Dictionary<string, int> PurchaseProducts(Dictionary<string, int> productOrder, Dictionary<string, int> incomingCoins)
+        public override Dictionary<string, int> PurchaseProducts(
+            Dictionary<string, int> productOrder, 
+            Dictionary<string, int> incomingCoins)
         {
             var totalCost = 0;
 
@@ -84,12 +87,12 @@ namespace VendingMachine.Machine
             }
         }
 
-        protected Dictionary<string, int> MakeChange(int amount)
+        public override Dictionary<string, int> MakeChange(int amount)
         {
             var _amount = amount;
             Dictionary<string, int> change = new Dictionary<string, int>();
 
-            foreach (Coin c in Coins) {
+            foreach (Coin c in coins) {
                 var coinsNeeded = Math.Min(_amount / c.Value, c.Quantity);
                 _amount -= coinsNeeded * c.Value;
             }
@@ -100,7 +103,7 @@ namespace VendingMachine.Machine
 
             _amount = amount;
 
-            foreach (Coin c in Coins) {
+            foreach (Coin c in coins) {
                 var coinsNeeded = Math.Min(_amount / c.Value, c.Quantity);
                 change[c.Name] = coinsNeeded;
                 ModCoinQuantity(c.Name, -1 * coinsNeeded);
@@ -110,27 +113,27 @@ namespace VendingMachine.Machine
             return change;
         }
 
-        protected void ModProductQuantity(string name, int quantityToMod)
+        public override void ModProductQuantity(string name, int quantityToMod)
         {
-            foreach (Product p in Products) {
+            foreach (Product p in products) {
                 if (p.Name == name) {
                     p.Quantity += quantityToMod;
                 }
             }
         }
 
-        protected void ModCoinQuantity(string name, int quantityToMod)
+        public override void ModCoinQuantity(string name, int quantityToMod)
         {
-            foreach (Coin c in Coins) {
+            foreach (Coin c in coins) {
                 if (c.Name == name) {
                     c.Quantity += quantityToMod;
                 }
             }
         }
 
-        protected Dictionary<string, int> GetCoinInfo(string name)
+        public override Dictionary<string, int> GetCoinInfo(string name)
         {
-            foreach (Coin c in Coins) {
+            foreach (Coin c in coins) {
                 if (c.Name == name) {
                     return new Dictionary<string, int>() {
                         ["value"] = c.Value,
@@ -141,5 +144,7 @@ namespace VendingMachine.Machine
             throw new KeyNotFoundException("No products exist with given name");
         }
 
+        protected List<Product> products;
+        protected List<Coin> coins;
     }
 }
