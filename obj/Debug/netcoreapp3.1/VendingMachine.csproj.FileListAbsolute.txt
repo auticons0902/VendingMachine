@@ -1,0 +1,15 @@
+Y:\git\VendingMachine\bin\Debug\netcoreapp3.1\VendingMachine.exe
+Y:\git\VendingMachine\bin\Debug\netcoreapp3.1\VendingMachine.deps.json
+Y:\git\VendingMachine\bin\Debug\netcoreapp3.1\VendingMachine.runtimeconfig.json
+Y:\git\VendingMachine\bin\Debug\netcoreapp3.1\VendingMachine.runtimeconfig.dev.json
+Y:\git\VendingMachine\bin\Debug\netcoreapp3.1\VendingMachine.dll
+Y:\git\VendingMachine\bin\Debug\netcoreapp3.1\VendingMachine.pdb
+Y:\git\VendingMachine\obj\Debug\netcoreapp3.1\VendingMachine.csprojAssemblyReference.cache
+Y:\git\VendingMachine\obj\Debug\netcoreapp3.1\VendingMachine.VendingMachineUI.resources
+Y:\git\VendingMachine\obj\Debug\netcoreapp3.1\VendingMachine.csproj.GenerateResource.cache
+Y:\git\VendingMachine\obj\Debug\netcoreapp3.1\VendingMachine.AssemblyInfoInputs.cache
+Y:\git\VendingMachine\obj\Debug\netcoreapp3.1\VendingMachine.AssemblyInfo.cs
+Y:\git\VendingMachine\obj\Debug\netcoreapp3.1\VendingMachine.csproj.CoreCompileInputs.cache
+Y:\git\VendingMachine\obj\Debug\netcoreapp3.1\VendingMachine.dll
+Y:\git\VendingMachine\obj\Debug\netcoreapp3.1\VendingMachine.pdb
+Y:\git\VendingMachine\obj\Debug\netcoreapp3.1\VendingMachine.genruntimeconfig.cache

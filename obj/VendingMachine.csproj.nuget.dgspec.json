@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "\\\\Mac\\Home\\Downloads\\GreenSlate\\VendingMachine_TimN\\VendingMachine\\VendingMachine.csproj": {}
+    "Y:\\git\\VendingMachine\\VendingMachine.csproj": {}
   },
   "projects": {
-    "\\\\Mac\\Home\\Downloads\\GreenSlate\\VendingMachine_TimN\\VendingMachine\\VendingMachine.csproj": {
+    "Y:\\git\\VendingMachine\\VendingMachine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\Mac\\Home\\Downloads\\GreenSlate\\VendingMachine_TimN\\VendingMachine\\VendingMachine.csproj",
+        "projectUniqueName": "Y:\\git\\VendingMachine\\VendingMachine.csproj",
         "projectName": "VendingMachine",
-        "projectPath": "\\\\Mac\\Home\\Downloads\\GreenSlate\\VendingMachine_TimN\\VendingMachine\\VendingMachine.csproj",
+        "projectPath": "Y:\\git\\VendingMachine\\VendingMachine.csproj",
         "packagesPath": "C:\\Users\\Tim Nguyen\\.nuget\\packages\\",
-        "outputPath": "\\\\Mac\\Home\\Downloads\\GreenSlate\\VendingMachine_TimN\\VendingMachine\\obj\\",
+        "outputPath": "Y:\\git\\VendingMachine\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tim Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
