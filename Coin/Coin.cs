@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VendingMachine.Coin
 {
-    class Collections
+    class Coin
     {
         public virtual String Name { get; protected set; }
         public virtual int Quantity { get; set; }
